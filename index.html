@@ -1,0 +1,286 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treviño Law – Personal Injury & Criminal Defense</title>
+
+  <!-- Google Font for logo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body id="top">
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="logo">
+        <a href="#top" class="logo-link" aria-label="Treviño Law home">
+          <span class="logo-word">Treviño</span>
+          <span class="logo-word">Law</span>
+        </a>
+      </div>
+
+      <div class="top-bar-contact">
+        <div class="contact-item">
+          <span class="label">Call Now</span>
+          <a href="tel:9562830067">(956) 283-0067</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="label">24/7 Support Call</span>
+          <a href="tel:9568840488">(956) 884-0488</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-label="Hero">
+    <div class="container hero-inner">
+      <div class="hero-form-card" data-aos="fade-left">
+        <h2>Free Case Review</h2>
+        <p class="hero-form-subtitle">
+          Tell us what happened. We&apos;ll contact you shortly.
+        </p>
+<form
+  class="hero-form"
+  id="contactForm"
+  action="https://formspree.io/f/xdaaajjz"
+  method="POST"
+>
+  <input type="hidden" name="_subject" value="New Free Case Review (Treviño Law website)" />
+<input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html" />
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+>
+
+
+  <div class="form-group">
+    <label for="name">Full Name*</label>
+    <input type="text" id="name" name="name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number*</label>
+    <input type="tel" id="phone" name="phone" required />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email (optional)</label>
+    <input type="email" id="email" name="_replyto" />
+  </div>
+
+  <div class="form-group">
+    <label for="accidentType">Type of accident</label>
+    <select id="accidentType" name="accidentType">
+      <option value="">Select one</option>
+      <option value="car">Car Accident</option>
+      <option value="truck">Truck Accident</option>
+      <option value="motorcycle">Motorcycle Accident</option>
+      <option value="rideshare">Rideshare (Uber/Lyft)</option>
+      <option value="pedestrian">Pedestrian Accident</option>
+      <option value="bus">Bus Accident</option>
+      <option value="workplace_accident">Workplace Accident</option>
+      <option value="construction">Construction Accident</option>
+      <option value="premises">Slip and Fall / Premises Liability</option>
+      <option value="dog_bite">Dog Bite / Animal Attack</option>
+      <option value="wrongful_death">Wrongful Death</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Brief description of your case:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary">Get Your Free Consultation</button>
+
+  <p class="form-disclaimer">
+    By submitting, you agree that we may contact you about your inquiry.
+  </p>
+</form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Areas -->
+  <section class="practice-areas" aria-label="Practice areas">
+    
+    <div class="container" data-aos="fade-up">
+      <h2>Types of Cases We Handle</h2>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <img src="assets/grid_cards/car_accident.png" alt="Car accident" />
+          <h3>Car Accidents</h3>
+          <p>Collisions involving passenger vehicles of all kinds.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/truck18.png" alt="Truck accident" />
+          <h3>Truck Accidents</h3>
+          <p>Crashes involving 18-wheelers and commercial trucks.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/motorcycle.png" alt="Motorcycle accident" />
+          <h3>Motorcycle Accidents</h3>
+          <p>Representing injured motorcycle riders and their passengers.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/rideshare.png" alt="Rideshare accident" />
+          <h3>Rideshare (Uber/Lyft) Accidents</h3>
+          <p>Injuries involving rideshare drivers or passengers.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/DWI.png" alt="DWI" />
+          <h3>DWI</h3>
+          <p>Defense for DWI and alcohol-related driving charges.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/pedestrian.png" alt="Pedestrian accident" />
+          <h3>Pedestrian Accidents</h3>
+          <p>Injuries to pedestrians struck by vehicles.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/bus.png" alt="Bus accident" />
+          <h3>Bus Accidents</h3>
+          <p>Injuries involving city, school, or private buses.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/workplace.png" alt="Workplace accident" />
+          <h3>Workplace Accidents</h3>
+          <p>On-the-job injuries caused by unsafe conditions.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/construction.png" alt="Construction accident" />
+          <h3>Construction Accidents</h3>
+          <p>Injuries occurring on construction sites.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/slipfall.png" alt="Slip and fall case" />
+          <h3>Slip and Fall / Premises Liability</h3>
+          <p>Injuries caused by unsafe or hazardous conditions.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/wrongfuldeath.png" alt="Wrongful death case" />
+          <h3>Wrongful Death</h3>
+          <p>Claims brought by families who lost a loved one.</p>
+        </div>
+
+        <div class="card">
+          <img src="assets/grid_cards/other.png" alt="Other injury cases" />
+          <h3>Other Injury Cases</h3>
+          <p>Any other accident or injury caused by negligence.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section class="about" aria-label="About">
+    <div class="container about-inner" data-aos="fade-up">
+      <div class="about-text">
+        <h2>About Treviño Law</h2>
+        <p>
+          Treviño Law is committed to standing up for individuals and families during life’s
+          most challenging moments. The firm provides dedicated legal representation for clients
+          who have been injured due to negligence, as well as those facing criminal charges at
+          the state or federal level.
+        </p>
+        <p>
+          At Treviño Law, every client receives personal attention, honest guidance, and a
+          strong advocate who is prepared to fight for their rights from start to finish.
+        </p>
+        <a href="#contact" class="btn-secondary">Schedule Your Free Consultation</a>
+      </div>
+
+      <div class="about-photo">
+        <img src="assets/mr_trev/mrtrevino.jpg" alt="Attorney Gregorio Treviño" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="map" aria-label="Map">
+    <div class="container">
+      <div class="map-embed">
+        <iframe
+          title="Treviño Law location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9809750195304!2d-98.17899423662675!3d26.20544212662599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8665a12ad181be07%3A0x4113a3a9bf7ce27e!2sLaw%20Office%20Of%20Gregorio%20Trevi%C3%B1o!5e0!3m2!1sen!2sus!4v1763397174100!5m2!1sen!2sus"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>Pharr Office</h3>
+        <p>
+          300 E Expressway 83<br />
+          Pharr, TX, United States, Texas<br />
+          Phone: <a href="tel:9562830067">(956) 283-0067</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>24/7 Support Line</h4>
+        <p>Phone: <a href="tel:9568840488">(956) 884-0488</a></p>
+        <p>Email: <a href="mailto:info@trevinolaw.com">info@trevinolaw.com</a></p>
+      </div>
+
+      <div class="footer-col">
+  <h4>Legal</h4>
+  <p>
+    <a href="privacy-policy.html" class="footer-link">
+      Privacy Policy & Legal Disclaimer
+    </a>
+  </p>
+</div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Treviño Law. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="main.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

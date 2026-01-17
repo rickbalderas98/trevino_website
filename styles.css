@@ -1,0 +1,453 @@
+/* styles.css */
+:root {
+  --bg-light: #f5f5f7;
+  --bg-dark: #111827;
+  --primary: #FACC15;        /* main yellow */
+  --primary-dark: #EAB308;   /* darker yellow */
+  --accent: #FACC15;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --card-bg: #ffffff;
+  --border-radius-lg: 12px;
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.18);
+  --container-width: 1120px;
+  --brand-font: "Cinzel", "Times New Roman", serif;
+}
+
+/* Global */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text-main);
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Top bar */
+
+.top-bar {
+  background-color: #0b0b0b;
+  color: #f9fafb;
+  padding: 10px 0;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Text-based logo styled like the sign */
+.logo-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.logo-word {
+  font-family: var(--brand-font);
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.45);
+}
+
+/* Updated top-bar contact styles (matches HTML) */
+.top-bar-contact {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.contact-item .label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+}
+
+.contact-item a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f9fafb;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  padding: 80px 0;
+  background:
+    linear-gradient(to right,
+      rgba(0,0,0,0.92) 0%,
+      rgba(0,0,0,0.55) 35%,
+      rgba(0,0,0,0) 70%),
+    url("assets/website_logo_background/trevinolaw2upscaled.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 40px;
+}
+
+/* Hero form card (clean white card) */
+
+.hero-form-card {
+  max-width: 420px;
+  width: 100%;
+  background: #ffffff;
+  color: var(--text-main);
+  border-radius: 16px;
+  padding: 22px 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-form-card h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.hero-form-subtitle {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.hero-form .form-group {
+  margin-bottom: 12px;
+}
+
+.hero-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.hero-form input,
+.hero-form select,
+.hero-form textarea {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.hero-form input:focus,
+.hero-form select:focus,
+.hero-form textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.btn-primary {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(to right, var(--primary), var(--primary-dark));
+  color: #111827;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.form-disclaimer {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+/* Sections */
+
+section {
+  padding: 50px 0;
+}
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Cards grid */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 18px 16px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+.card h3 {
+  margin: 10px 0 6px;
+}
+
+/* Practice areas */
+
+.practice-areas {
+  background-color: var(--bg-light);
+}
+
+.practice-areas .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* About */
+
+.about {
+  background-color: var(--bg-light);
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.about-text p {
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--primary-dark);
+  color: var(--primary-dark);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn-secondary:hover {
+  background-color: #fef3c7;
+  text-decoration: none;
+}
+
+/* Map */
+
+.map {
+  background: #ffffff;
+}
+
+.map .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.map-embed iframe {
+  width: 100vw;
+  height: 450px; /* increase height if desired */
+  border: 0;
+  border-radius: 0; /* remove rounding for full-width look */
+  box-shadow: none; /* optional: cleaner edge-to-edge */
+}
+
+/* Footer */
+
+.footer {
+  background-color: #0b0b0b;
+  color: #e5e7eb;
+  padding-top: 32px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding-bottom: 16px;
+}
+
+.footer h3,
+.footer h4 {
+  margin-top: 0;
+}
+
+.footer a {
+  color: #facc15;
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding: 10px 16px 14px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .hero {
+    padding-top: 16px;
+    padding-bottom: 28px;
+  }
+
+  .hero-inner {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .top-bar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .top-bar-contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    text-align: left;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-word {
+    font-size: 20px;
+    letter-spacing: 0.10em;
+  }
+}
+
+/* ==============================
+   Legal Pages (Privacy Policy)
+   Dark Theme
+================================ */
+
+.legal-page {
+  background-color: #0b0b0b; /* deep black */
+  padding: 90px 0;
+}
+
+.legal-page .container {
+  max-width: 950px;
+}
+
+.legal-page h1,
+.legal-page h2 {
+  color: var(--primary, #FACC15); /* gold */
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.5px;
+}
+
+.legal-page h1 {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+
+/* Optional polish: gold divider under main title */
+.legal-page h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--primary, #FACC15);
+  margin-top: 14px;
+}
+
+.legal-page h2 {
+  font-size: 1.5rem;
+  margin-top: 42px;
+  margin-bottom: 10px;
+}
+
+.legal-page p,
+.legal-page li {
+  color: #e5e7eb; /* soft white */
+  line-height: 1.75;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.legal-page a {
+  color: #fef08a; /* soft gold link */
+  text-decoration: underline;
+}
+
+.legal-page a:hover {
+  color: #fde047;
+}
+
+.legal-page hr {
+  margin: 60px 0;
+  border: none;
+  border-top: 1px solid #2a2a2a;
+}
