@@ -2,8 +2,8 @@
 :root {
   --bg-light: #f5f5f7;
   --bg-dark: #111827;
-  --primary: #FACC15;        /* main yellow */
-  --primary-dark: #EAB308;   /* darker yellow */
+  --primary: #FACC15;
+  --primary-dark: #EAB308;
   --accent: #FACC15;
   --text-main: #111827;
   --text-muted: #6b7280;
@@ -15,12 +15,9 @@
 }
 
 /* Global */
-
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -34,10 +31,7 @@ a {
   color: var(--primary-dark);
   text-decoration: none;
 }
-
-a:hover {
-  text-decoration: underline;
-}
+a:hover { text-decoration: underline; }
 
 .container {
   width: 100%;
@@ -47,7 +41,6 @@ a:hover {
 }
 
 /* Top bar */
-
 .top-bar {
   background-color: #0b0b0b;
   color: #f9fafb;
@@ -61,12 +54,8 @@ a:hover {
   gap: 14px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
+.logo { display: flex; align-items: center; }
 
-/* Text-based logo styled like the sign */
 .logo-link {
   display: inline-flex;
   align-items: baseline;
@@ -84,7 +73,7 @@ a:hover {
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.45);
 }
 
-/* Updated top-bar contact styles (matches HTML) */
+/* Top-bar contact */
 .top-bar-contact {
   display: flex;
   gap: 18px;
@@ -108,13 +97,9 @@ a:hover {
   color: #f9fafb;
   text-decoration: none;
 }
-
-.contact-item a:hover {
-  text-decoration: underline;
-}
+.contact-item a:hover { text-decoration: underline; }
 
 /* Hero */
-
 .hero {
   position: relative;
   padding: 80px 0;
@@ -130,44 +115,47 @@ a:hover {
   color: #ffffff;
 }
 
+/* ✅ Desktop: keep form toward the left */
 .hero-inner {
   display: flex;
   justify-content: flex-start;
   padding-left: 40px;
 }
 
-/* Hero form card (clean white card) */
-
+/* Dark translucent (glass) card */
 .hero-form-card {
-  max-width: 420px;
+  max-width: 460px;
   width: 100%;
-  background: #ffffff;
-  color: var(--text-main);
+  background: rgba(10, 10, 10, 0.55);
+  color: #f9fafb;
   border-radius: 16px;
   padding: 22px 18px;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .hero-form-card h2 {
   margin: 0 0 4px;
   font-size: 22px;
+  color: #ffffff;
 }
 
 .hero-form-subtitle {
   margin: 0 0 16px;
   font-size: 14px;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.hero-form .form-group {
-  margin-bottom: 12px;
-}
+.hero-form .form-group { margin-bottom: 12px; }
 
 .hero-form label {
   display: block;
   font-size: 13px;
   font-weight: 500;
   margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hero-form input,
@@ -176,9 +164,16 @@ a:hover {
   width: 100%;
   padding: 9px 10px;
   border-radius: 8px;
-  border: 1px solid #e5e7eb;
   font-size: 14px;
   font-family: inherit;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.hero-form input::placeholder,
+.hero-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .hero-form input:focus,
@@ -196,36 +191,43 @@ a:hover {
   border-radius: 999px;
   border: none;
   background: linear-gradient(to right, var(--primary), var(--primary-dark));
-  color: #111827;
+  color: #fff;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
   margin-top: 4px;
 }
+.btn-primary:hover { filter: brightness(1.05); }
 
-.btn-primary:hover {
-  filter: brightness(1.05);
-}
+a.btn-primary,
+a.btn-primary:visited { color: #fff; }
 
 .form-disclaimer {
   font-size: 11px;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.65);
   margin-top: 8px;
 }
 
 /* Sections */
+section { padding: 50px 0; }
+section h2 { font-size: 24px; margin-bottom: 8px; }
 
-section {
-  padding: 50px 0;
+/* Practice header + hint */
+.practice-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-section h2 {
-  font-size: 24px;
-  margin-bottom: 8px;
+.practice-hint {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: none; /* mobile only */
+  text-align: center;
 }
 
-/* Cards grid */
-
+/* Cards grid (desktop default) */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -239,15 +241,10 @@ section h2 {
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
 }
 
-.card h3 {
-  margin: 10px 0 6px;
-}
+.card h3 { margin: 10px 0 6px; }
 
 /* Practice areas */
-
-.practice-areas {
-  background-color: var(--bg-light);
-}
+.practice-areas { background-color: var(--bg-light); }
 
 .practice-areas .card img {
   width: 100%;
@@ -259,10 +256,7 @@ section h2 {
 }
 
 /* About */
-
-.about {
-  background-color: var(--bg-light);
-}
+.about { background-color: var(--bg-light); }
 
 .about-inner {
   display: grid;
@@ -300,10 +294,7 @@ section h2 {
 }
 
 /* Map */
-
-.map {
-  background: #ffffff;
-}
+.map { background: #ffffff; }
 
 .map .container {
   max-width: 100%;
@@ -311,15 +302,15 @@ section h2 {
 }
 
 .map-embed iframe {
-  width: 100vw;
-  height: 450px; /* increase height if desired */
+  width: 100%;
+  height: 450px;
   border: 0;
-  border-radius: 0; /* remove rounding for full-width look */
-  box-shadow: none; /* optional: cleaner edge-to-edge */
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
 }
 
 /* Footer */
-
 .footer {
   background-color: #0b0b0b;
   color: #e5e7eb;
@@ -334,13 +325,9 @@ section h2 {
 }
 
 .footer h3,
-.footer h4 {
-  margin-top: 0;
-}
+.footer h4 { margin-top: 0; }
 
-.footer a {
-  color: #facc15;
-}
+.footer a { color: #facc15; }
 
 .footer-bottom {
   border-top: 1px solid #374151;
@@ -349,17 +336,11 @@ section h2 {
   text-align: center;
 }
 
-/* Responsive */
-
+/* Responsive (general) */
 @media (max-width: 900px) {
   .hero {
     padding-top: 16px;
     padding-bottom: 28px;
-  }
-
-  .hero-inner {
-    padding-left: 0;
-    justify-content: center;
   }
 
   .top-bar-inner {
@@ -387,23 +368,95 @@ section h2 {
   }
 }
 
+/* =========================
+   Mobile: center hero card + swipe cards
+   ========================= */
+@media (max-width: 768px) {
+  /* ✅ Mobile: perfectly centered */
+  .hero-inner {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  /* ✅ Fix the side gap */
+  .hero-form-card {
+    margin: 0 auto;
+    width: min(520px, 100%);
+    max-width: 520px;
+    padding: 18px 16px;
+  }
+
+  /* Mobile swipe carousel for cards */
+  .cards-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px;
+
+    padding: 8px 16px 18px;
+    margin: 0 -16px;
+  }
+
+  .cards-grid .card {
+    flex: 0 0 82%;
+    scroll-snap-align: start;
+  }
+
+  .cards-grid::-webkit-scrollbar { height: 8px; }
+  .cards-grid::-webkit-scrollbar-thumb {
+    background: rgba(17, 24, 39, 0.18);
+    border-radius: 999px;
+  }
+
+  .practice-hint {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .map-embed iframe { height: 320px; }
+}
+
+/* iPhone zoom prevention + small polish */
+@media (max-width: 480px) {
+  .logo-word {
+    font-size: 18px;
+    letter-spacing: 0.08em;
+  }
+
+  .contact-item a { font-size: 15px; }
+
+  .hero-form-card h2 { font-size: 20px; }
+
+  .hero-form input,
+  .hero-form select,
+  .hero-form textarea {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+
+  .practice-areas .card img { height: 150px; }
+  .map-embed iframe { height: 280px; }
+}
+
 /* ==============================
    Legal Pages (Privacy Policy)
    Dark Theme
 ================================ */
-
 .legal-page {
-  background-color: #0b0b0b; /* deep black */
+  background-color: #0b0b0b;
   padding: 90px 0;
 }
 
-.legal-page .container {
-  max-width: 950px;
-}
+.legal-page .container { max-width: 950px; }
 
 .legal-page h1,
 .legal-page h2 {
-  color: var(--primary, #FACC15); /* gold */
+  color: var(--primary, #FACC15);
   font-family: "Cinzel", serif;
   letter-spacing: 0.5px;
 }
@@ -413,7 +466,6 @@ section h2 {
   margin-bottom: 12px;
 }
 
-/* Optional polish: gold divider under main title */
 .legal-page h1::after {
   content: "";
   display: block;
@@ -431,20 +483,18 @@ section h2 {
 
 .legal-page p,
 .legal-page li {
-  color: #e5e7eb; /* soft white */
+  color: #e5e7eb;
   line-height: 1.75;
   font-size: 1rem;
   margin-bottom: 16px;
 }
 
 .legal-page a {
-  color: #fef08a; /* soft gold link */
+  color: #fef08a;
   text-decoration: underline;
 }
 
-.legal-page a:hover {
-  color: #fde047;
-}
+.legal-page a:hover { color: #fde047; }
 
 .legal-page hr {
   margin: 60px 0;

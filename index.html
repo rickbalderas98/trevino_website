@@ -19,7 +19,6 @@
 
   <link rel="stylesheet" href="styles.css" />
   <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-
 </head>
 
 <body id="top">
@@ -55,77 +54,100 @@
         <p class="hero-form-subtitle">
           Tell us what happened. We&apos;ll contact you shortly.
         </p>
-<form
-  class="hero-form"
-  id="contactForm"
-  action="https://formspree.io/f/xdaaajjz"
-  method="POST"
->
-  <input type="hidden" name="_subject" value="New Free Case Review (Treviño Law website)" />
-<input type="hidden" name="_next" value="https://sunny-elf-929bb5.netlify.app/thank-you.html" />
-<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
+        <form
+          class="hero-form"
+          id="contactForm"
+          action="https://formspree.io/f/xdaaajjz"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="New Free Case Review (Treviño Law website)" />
+          <input type="hidden" name="_next" value="https://sunny-elf-929bb5.netlify.app/thank-you.html" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-  <div class="form-group">
-    <label for="name">Full Name*</label>
-    <input type="text" id="name" name="name" required />
-  </div>
+          <div class="form-group">
+            <label for="name">Full Name*</label>
+            <input type="text" id="name" name="name" required />
+          </div>
 
-  <div class="form-group">
-    <label for="phone">Phone Number*</label>
-    <input type="tel" id="phone" name="phone" required />
-  </div>
+          <div class="form-group">
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
 
-  <div class="form-group">
-    <label for="email">Email (optional)</label>
-    <input type="email" id="email" name="_replyto" />
-  </div>
+          <div class="form-group">
+            <label for="email">Email (optional)</label>
+            <input type="email" id="email" name="_replyto" />
+          </div>
 
-  <div class="form-group">
-    <label for="accidentType">Type of accident</label>
-    <select id="accidentType" name="accidentType">
-      <option value="">Select one</option>
-      <option value="car">Car Accident</option>
-      <option value="truck">Truck Accident</option>
-      <option value="motorcycle">Motorcycle Accident</option>
-      <option value="rideshare">Rideshare (Uber/Lyft)</option>
-      <option value="pedestrian">Pedestrian Accident</option>
-      <option value="bus">Bus Accident</option>
-      <option value="workplace_accident">Workplace Accident</option>
-      <option value="construction">Construction Accident</option>
-      <option value="premises">Slip and Fall / Premises Liability</option>
-      <option value="dog_bite">Dog Bite / Animal Attack</option>
-      <option value="wrongful_death">Wrongful Death</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
+          <div class="form-group">
+            <label for="accidentType">Type of accident</label>
+            <select id="accidentType" name="accidentType">
+              <option value="">Select one</option>
+              <option value="car">Car Accident</option>
+              <option value="truck">Truck Accident</option>
+              <option value="motorcycle">Motorcycle Accident</option>
+              <option value="rideshare">Rideshare (Uber/Lyft)</option>
+              <option value="pedestrian">Pedestrian Accident</option>
+              <option value="bus">Bus Accident</option>
+              <option value="workplace_accident">Workplace Accident</option>
+              <option value="construction">Construction Accident</option>
+              <option value="premises">Slip and Fall / Premises Liability</option>
+              <option value="dog_bite">Dog Bite / Animal Attack</option>
+              <option value="wrongful_death">Wrongful Death</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
 
-  <div class="form-group">
-    <label for="message">Brief description of your case:</label>
-    <textarea id="message" name="message" rows="4"></textarea>
-  </div>
+          <div class="form-group">
+            <label for="message">Brief description of your case:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
 
-  <div class="h-captcha" data-sitekey="86ba1f68-6592-49aa-8764-4836e9c23264"></div>
+          <div class="h-captcha" data-sitekey="86ba1f68-6592-49aa-8764-4836e9c23264"></div>
 
-  <button type="submit" class="btn-primary">Get Your Free Consultation</button>
+          <button type="submit" class="btn-primary">Get Your Free Consultation</button>
 
-  <p class="form-disclaimer">
-    By submitting, you agree that we may contact you about your inquiry.
-  </p>
-</form>
+          <p class="form-disclaimer">
+            By submitting, you agree that we may contact you about your inquiry.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
 
+  <!-- About (above Practice Areas) -->
+  <section class="about" aria-label="About">
+    <div class="container about-inner" data-aos="fade-up">
+      <div class="about-text">
+        <h2>About Treviño Law</h2>
+        <p>
+          Treviño Law is committed to standing up for individuals and families during life’s
+          most challenging moments. The firm provides dedicated legal representation for clients
+          who have been injured due to negligence, as well as those facing criminal charges at
+          the state or federal level.
+        </p>
+        <p>
+          At Treviño Law, every client receives personal attention, honest guidance, and a
+          strong advocate who is prepared to fight for their rights from start to finish.
+        </p>
+        <a href="#contact" class="btn-secondary">Schedule Your Free Consultation</a>
+      </div>
+
+      <div class="about-photo">
+        <img src="assets/mr_trev/mrtrevino.jpg" alt="Attorney Gregorio Treviño" />
       </div>
     </div>
   </section>
 
   <!-- Practice Areas -->
   <section class="practice-areas" aria-label="Practice areas">
-    
     <div class="container" data-aos="fade-up">
-      <h2>Types of Cases We Handle</h2>
+      <div class="practice-header">
+        <h2>Types of Cases We Handle</h2>
+      </div>
 
       <div class="cards-grid">
-
         <div class="card">
           <img src="assets/grid_cards/car_accident.png" alt="Car accident" />
           <h3>Car Accidents</h3>
@@ -197,34 +219,9 @@
           <h3>Other Injury Cases</h3>
           <p>Any other accident or injury caused by negligence.</p>
         </div>
-
       </div>
 
-    </div>
-
-  </section>
-
-  <!-- About -->
-  <section class="about" aria-label="About">
-    <div class="container about-inner" data-aos="fade-up">
-      <div class="about-text">
-        <h2>About Treviño Law</h2>
-        <p>
-          Treviño Law is committed to standing up for individuals and families during life’s
-          most challenging moments. The firm provides dedicated legal representation for clients
-          who have been injured due to negligence, as well as those facing criminal charges at
-          the state or federal level.
-        </p>
-        <p>
-          At Treviño Law, every client receives personal attention, honest guidance, and a
-          strong advocate who is prepared to fight for their rights from start to finish.
-        </p>
-        <a href="#contact" class="btn-secondary">Schedule Your Free Consultation</a>
-      </div>
-
-      <div class="about-photo">
-        <img src="assets/mr_trev/mrtrevino.jpg" alt="Attorney Gregorio Treviño" />
-      </div>
+      <p class="practice-hint">On mobile, swipe to see more →</p>
     </div>
   </section>
 
@@ -262,14 +259,13 @@
       </div>
 
       <div class="footer-col">
-  <h4>Legal</h4>
-  <p>
-    <a href="privacy-policy.html" class="footer-link">
-      Privacy Policy & Legal Disclaimer
-    </a>
-  </p>
-</div>
-
+        <h4>Legal</h4>
+        <p>
+          <a href="privacy-policy.html" class="footer-link">
+            Privacy Policy & Legal Disclaimer
+          </a>
+        </p>
+      </div>
     </div>
 
     <div class="footer-bottom">
