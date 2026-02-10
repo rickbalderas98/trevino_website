@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Treviño Law – Personal Injury & Criminal Defense</title>
+  <title>Treviño Law – Personal Injury, Criminal Defense & Family Law</title>
 
   <!-- Google Font for logo -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,7 +62,8 @@
           method="POST"
         >
           <input type="hidden" name="_subject" value="New Free Case Review (Treviño Law website)" />
-          <input type="hidden" name="_next" value="https://sunny-elf-929bb5.netlify.app/thank-you.html" />
+          <!-- Use a relative path so it works on any domain -->
+          <input type="hidden" name="_next" value="/thank-you.html" />
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
           <div class="form-group">
@@ -80,22 +81,54 @@
             <input type="email" id="email" name="_replyto" />
           </div>
 
+          <!-- UPDATED DROPDOWN -->
           <div class="form-group">
-            <label for="accidentType">Type of accident</label>
-            <select id="accidentType" name="accidentType">
+            <label for="caseType">Type of case*</label>
+            <select id="caseType" name="caseType" required>
               <option value="">Select one</option>
-              <option value="car">Car Accident</option>
-              <option value="truck">Truck Accident</option>
-              <option value="motorcycle">Motorcycle Accident</option>
-              <option value="rideshare">Rideshare (Uber/Lyft)</option>
-              <option value="pedestrian">Pedestrian Accident</option>
-              <option value="bus">Bus Accident</option>
-              <option value="workplace_accident">Workplace Accident</option>
-              <option value="construction">Construction Accident</option>
-              <option value="premises">Slip and Fall / Premises Liability</option>
-              <option value="dog_bite">Dog Bite / Animal Attack</option>
-              <option value="wrongful_death">Wrongful Death</option>
-              <option value="other">Other</option>
+
+              <optgroup label="Personal Injury / Civil">
+                <option value="car-accident">Car Accident</option>
+                <option value="truck-accident">Truck Accident (18-wheeler/commercial)</option>
+                <option value="motorcycle-accident">Motorcycle Accident</option>
+                <option value="rideshare-accident">Rideshare Accident (Uber/Lyft)</option>
+                <option value="pedestrian-injury">Pedestrian Injury</option>
+                <option value="bicycle-accident">Bicycle Accident</option>
+                <option value="bus-transit-accident">Bus / Transit Accident</option>
+                <option value="wrongful-death">Wrongful Death</option>
+                <option value="slip-fall">Slip &amp; Fall / Premises Liability</option>
+                <option value="dog-bite">Dog Bites / Animal Attacks</option>
+                <option value="workplace-injury">Workplace Injury / Third-Party Claim</option>
+                <option value="construction-injury">Construction Site Injury</option>
+              </optgroup>
+
+              <optgroup label="Criminal Defense">
+                <option value="dwi-dui">DWI / DUI</option>
+                <option value="drug-possession">Drug Possession</option>
+                <option value="drug-paraphernalia">Drug Paraphernalia</option>
+                <option value="drug-distribution">Drug Distribution / Intent to Deliver</option>
+                <option value="assault">Assault</option>
+                <option value="aggravated-assault">Aggravated Assault</option>
+                <option value="domestic-violence">Domestic Violence Allegations</option>
+                <option value="sexual-assault">Sexual Assault / Indecency Allegations</option>
+                <option value="theft-shoplifting">Theft / Shoplifting</option>
+                <option value="burglary">Burglary</option>
+                <option value="robbery">Robbery</option>
+                <option value="weapons-charges">Weapons Charges / Unlawful Carry</option>
+                <option value="arson">Arson</option>
+                <option value="probation-violation">Probation Violation / Revocation</option>
+                <option value="warrants-bond">Outstanding Warrants / Bond Hearings</option>
+              </optgroup>
+
+              <optgroup label="Family Law">
+                <option value="child-custody">Child Custody / Conservatorship</option>
+                <option value="divorce-separation">Divorce / Separation</option>
+                <option value="child-support">Child Support (Establish/Modify/Enforce)</option>
+              </optgroup>
+
+              <optgroup label="Other">
+                <option value="other">Other / Not sure</option>
+              </optgroup>
             </select>
           </div>
 
@@ -131,7 +164,7 @@
           At Treviño Law, every client receives personal attention, honest guidance, and a
           strong advocate who is prepared to fight for their rights from start to finish.
         </p>
-        <a href="#contact" class="btn-secondary">Schedule Your Free Consultation</a>
+        <a href="#top" class="btn-secondary">Schedule Your Free Consultation</a>
       </div>
 
       <div class="about-photo">

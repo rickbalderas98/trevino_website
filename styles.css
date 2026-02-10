@@ -171,6 +171,17 @@ a:hover { text-decoration: underline; }
   color: #ffffff;
 }
 
+/* Fix dropdown option text (prevents white-on-white) */
+.hero-form select option {
+  color: #111827;
+  background: #ffffff;
+}
+
+/* Optional: placeholder option looks muted */
+.hero-form select option[value=""] {
+  color: #6b7280;
+}
+
 .hero-form input::placeholder,
 .hero-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.55);
@@ -501,3 +512,6 @@ section h2 { font-size: 24px; margin-bottom: 8px; }
   border: none;
   border-top: 1px solid #2a2a2a;
 }
+
+
+html { scroll-behavior: smooth; }
